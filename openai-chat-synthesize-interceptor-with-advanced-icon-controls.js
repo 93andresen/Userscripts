@@ -5,6 +5,7 @@
 // @author       93andresen
 // @match        https://chatgpt.com/*
 // @grant        none
+// @license      MIT
 // @updateURL    https://raw.githubusercontent.com/93andresen/Userscripts/main/openai-chat-synthesize-interceptor-with-advanced-icon-controls.js
 // ==/UserScript==
 
