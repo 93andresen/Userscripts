@@ -4,6 +4,7 @@
 // @description  Capture ChatGPT Synthesize API responses and add advanced playback controls with icons. Forked by Baldoe13 on community.openai.com. Original by Winkelmann.
 // @author       93andresen
 // @match        https://chat.openai.com/*
+// @match        https://chatgpt.com/*
 // @grant        none
 // @license      MIT
 // @updateURL    https://raw.githubusercontent.com/93andresen/Userscripts/main/openai-chat-synthesize-interceptor-with-advanced-icon-controls.user.js
