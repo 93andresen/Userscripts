@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         OpenAI Chat Synthesize Interceptor with Advanced Icon Controls
 // @version      0.7
-// @description  Capture ChatGPT Synthesize API responses and add advanced playback controls with icons. Forked by Baldoe13 on https://community.openai.com. Original: Winkelmann on https://community.openai.com. I wanted it to update when updates release. Found it on in this thread and hoped someone would find this if thay wanted to make any updates. https://community.openai.com/t/read-aloud-feature-not-working-on-chatgpt-via-firefox/664947/9
+// @description  Capture ChatGPT Synthesize API responses and add advanced playback controls with icons. Forked by Baldoe13 on community.openai.com. Original by Winkelmann.
 // @author       93andresen
-// @match        https://chatgpt.com/*
+// @match        https://chat.openai.com/*
 // @grant        none
 // @license      MIT
-// @updateURL    https://raw.githubusercontent.com/93andresen/Userscripts/main/openai-chat-synthesize-interceptor-with-advanced-icon-controls.js
+// @updateURL    https://raw.githubusercontent.com/93andresen/Userscripts/main/openai-chat-synthesize-interceptor-with-advanced-icon-controls.user.js
+// @namespace    https://github.com/93andresen/Userscripts
 // ==/UserScript==
 
 (function () {
