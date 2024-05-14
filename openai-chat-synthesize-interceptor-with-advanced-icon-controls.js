@@ -5,7 +5,7 @@
 // @author       93andresen
 // @match        https://chatgpt.com/*
 // @grant        none
-// @updateURL    https://github.com/YourUsername/YourRepository/raw/main/YourScriptName.user.js
+// @updateURL    https://raw.githubusercontent.com/93andresen/Userscripts/main/openai-chat-synthesize-interceptor-with-advanced-icon-controls.js
 // ==/UserScript==
 
 (function () {
