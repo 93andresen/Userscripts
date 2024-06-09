@@ -1,10 +1,11 @@
 // ==UserScript==
 // @version      0.1
+// @description  try to take over the world!
 // @author       You
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @name         ChatGPT Hotkey
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      1.2
 // @description  Wait for element to load, paste text, and submit
 // @match        *://chatgpt.com/*
 // @grant        none
