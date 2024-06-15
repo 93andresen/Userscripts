@@ -1,0 +1,158 @@
+/* ==UserStyle==
+@name           Font Changer - For all websites FORK
+@namespace      arv-anshul
+@version        2.2.0
+@description    A userstyle to optionally change font and customize other text properties for all websites.
+@author         arv-anshul
+
+/* VARIABLES - STARTS *\/
+@advanced dropdown font-family "Font Style" {
+    2 "Baloo 2" <<<EOT 'Baloo 2' EOT;
+    default "# Default #" <<<EOT inherit EOT;
+    custom "# Custom #" <<<EOT /*[[custom-font]]*\/ EOT;
+    5 "PT Sans" <<<EOT 'PT Sans' EOT;
+    6 "Poppins" <<<EOT 'Poppins' EOT;
+    9 "Trebuchet MS" <<<EOT 'Trebuchet MS' EOT;
+}
+
+@advanced text custom-font "Custom Font [If Enabled]" "Katari"
+
+@advanced dropdown enable-font-change "Enable Font Change" {
+    true "Yes" <<<EOT true EOT;
+    false "No" <<<EOT false EOT;
+}
+
+@advanced range bullet-spacing "Bullet Spacing" [10, 5, 50, 1, 'px']
+
+@advanced range spacing "Letter Spacing" [-0.2, -2, 2, 0.2, 'px']
+
+@advanced text adjusted-font-size "Relative Font Size (default: unset)" "unset"
+
+@advanced dropdown stylus-font "Font Style for STYLUS" {
+    PT "PT Mono*" <<<EOT 'PT Mono' EOT;
+    0 "Courier New" <<<EOT 'Courier New' EOT;
+    2 "JetBrains Mono" <<<EOT 'JetBrains Mono' EOT;
+    4 "Operator Mono Lig" <<<EOT 'Operator Mono Lig' EOT;
+    default "# Default #" <<<EOT Menlo EOT;
+    custom "# Custom #" <<<EOT /*[[code-font]]*\/ EOT;
+}
+
+@advanced text code-font "Custom Font [If Enabled]" "JetBrains Mono, Monaco"
+
+==/UserStyle== */
+@-moz-document url-prefix("https://") {
+    /*  All Websites */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+    :root {
+        --family: /*[[font-family]]*/;
+        --font-family: var(--family);
+        --font: var(--family);
+    }
+
+    body,
+    html,
+    #__next {
+        font-family: /*[[enable-font-change]]*/ ? var(--family) : inherit !important;
+        font-size-adjust: /*[[adjusted-font-size]]*/ !important;
+        letter-spacing: /*[[spacing]]*/ !important;
+    }
+
+    ul {
+        margin-bottom: /*[[bullet-spacing]]*/ !important;
+    }
+
+    ul li {
+        margin-bottom: /*[[bullet-spacing]]*/ !important;
+    }
+
+    /* Specific Site Customizations */
+    /* quora.com */
+    div.q-box[width="314"] {
+        display: none;
+    }
+
+    #mainContent {
+        width: 80% !important;
+        margin: auto;
+    }
+
+    /* stackoverflow */
+    div.ff-sans.z-nav-fixed {
+        display: none;
+    }
+
+    /* Campusx */
+    #cookiePopupForm {
+        display: none;
+    }
+
+    /* GFG */
+    body.single .article-page_flex .leftBar {
+        flex-basis: unset;
+        max-width: none;
+        min-width: unset;
+    }
+
+    #gfg-footer,
+    .cookie-consent,
+    .login-modal-div {
+        display: none !important;
+    }
+}
+
+@-moz-document url-prefix("moz-extension://") {
+    /* Stylus Extension */
+    .CodeMirror {
+        font-family: /*[[stylus-font]]*/ !important;
+    }
+}
+
+@-moz-document url-prefix("https://raw.githubusercontent.com/") {
+    /* GitHub */
+    body {
+        font-family: 'JetBrains Mono', 'Operator Mono Lig' !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    td,
+    th,
+    td span,
+    code,
+    pre span,
+    pre {
+        font-family: 'Operator Mono Lig' !important;
+        font-size-adjust: 0.55 !important;
+    }
+}
+
+@-moz-document domain("stackexchange.com"),
+domain("stackoverflow.com") {
+    /* StackOverflow */
+
+    #content {
+        margin: 5px;
+        width: 100%;
+        border: none;
+    }
+
+    #mainbar,
+    .mainbar {
+        width: 100%;
+    }
+
+    body > .container {
+        justify-content: center;
+    }
+
+    .community-option,
+    #sidebar,
+    #left-sidebar,
+    .bottom-notice,
+    #footer,
+    #post-form,
+    #onetrust-banner-sdk,
+    div.js-consent-banner {
+        display: none;
+    }
+}
