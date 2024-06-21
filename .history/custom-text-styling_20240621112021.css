@@ -1,0 +1,17 @@
+/* Color bold text */
+b, strong {
+    color: #ff5733; /* Your desired color for bold text */
+}
+
+/* Color italic text */
+i, em {
+    color: #33aaff; /* Your desired color for italic text */
+}
+
+/* Add visual dividers between sentences */
+p {
+    display: block;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ddd; /* Your desired divider style */
+    padding-bottom: 0.5em;
+}
